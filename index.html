@@ -4,150 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🔴 EN VIVO: Corazón de Oro Capítulo 20 Completo - Sábado 28 de Marzo, 2026 | MexiDrama</title>
-<meta name="description" content="Mira el estreno de Corazón de Oro Capítulo 20 completo. Streaming en vivo hoy sábado 28 de marzo en Full HD sin comerciales. Drama, romance y secretos familiares de los Rivera.">
-<meta name="keywords" content="Corazón de Oro, Capítulo 20, ver online, telenovelas mexicanas 2026, streaming en vivo, episodio completo, drama mexicano, romance, secretos familiares, Fernando y Lucía">
-
-<link rel="canonical" href="https://mexidrama.github.io/corazon-de-oro/capitulo-20.html">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Corazón de Oro Capítulo 20 en Vivo",
-  "description": "Streaming oficial del capítulo 20 de Corazón de Oro emitido hoy 28 de Marzo. Revelación del testamento y secretos de Fernando.",
-  "thumbnailUrl": "https://mexidrama.github.io/images/corazon-de-oro-22.jpg",
-  "uploadDate": "2026-03-28T18:00:00+00:00",
-  "publication": {
-    "@type": "BroadcastEvent",
-    "isLiveBroadcast": true,
-    "startDate": "2026-03-28T18:00:00+00:00",
-    "endDate": "2026-03-28T22:00:00+00:00"
-  },
-  "contentUrl": "https://mexidrama.github.io/corazon-de-oro/capitulo-20.html",
-  "embedUrl": "https://mexidrama.github.io/corazon-de-oro/capitulo-20.html"
-}
-</script>
+<title>MexiDrama | Ver Telenovelas Mexicanas Gratis en Vivo HD</title>
+<meta name="description" content="La plataforma #1 para ver Corazón de Oro y las mejores telenovelas mexicanas de 2026 en vivo. Capítulos completos en Full HD sin registros.">
+<link rel="canonical" href="https://mexidrama.github.io/">
 
 <style>
 :root { 
-    --mex-red: #ce1126; --mex-green: #006341; --live-red: #ff0000; 
-    --gold: #d4af37; --chat-bg: #0f0f0f; 
+    --gold: #d4af37; --mex-red: #ce1126; --bg-dark: #050505; --card-bg: #121212;
 }
-body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #020202; color: #fff; overflow-x: hidden; }
+body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: #fff; overflow-x: hidden; }
 
-/* الهيدر */
+/* الهيدر الاحترافي */
 .header { 
     background: #000; padding: 15px 5%; border-bottom: 2px solid var(--gold); 
     display: flex; justify-content: space-between; align-items: center; 
     position: sticky; top: 0; z-index: 1000;
 }
-.logo { font-weight: 900; font-size: 1.8rem; color: #fff; text-decoration: none; }
+.logo { font-weight: 900; font-size: 1.8rem; color: #fff; text-decoration: none; letter-spacing: -1px; }
 .logo span { color: var(--gold); }
-.live-indicator { display: flex; align-items: center; gap: 8px; border: 1px solid var(--live-red); padding: 5px 15px; border-radius: 20px; }
-.dot { width: 10px; height: 10px; background: var(--live-red); border-radius: 50%; animation: blink 1s infinite; }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: bold; }
+.nav-links a { color: #ccc; text-decoration: none; transition: 0.3s; }
+.nav-links a:hover { color: var(--gold); }
 
-.container { max-width: 1200px; margin: auto; padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
-.main-video { flex: 2; min-width: 320px; }
-
-/* مشغل الفيديو الوهمي - يوجه لصفحة الحلقة */
-.video-wrapper { 
-    position: relative; width: 100%; aspect-ratio: 16/9; background: #111; 
-    border-radius: 12px; overflow: hidden; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); 
-    cursor: pointer; border: 1px solid #333; 
+/* البانر الرئيسي (Hero) */
+.hero { 
+    width: 100%; height: 450px; 
+    background: linear-gradient(to bottom, transparent, var(--bg-dark)), url('https://mexidrama.github.io/images/corazon-de-oro-22.jpg') center/cover;
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 0 5% 40px;
 }
-.video-wrapper img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: 0.5s; }
-.video-wrapper:hover img { opacity: 0.4; transform: scale(1.02); }
-.play-icon { 
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-    background: var(--gold); width: 80px; height: 80px; border-radius: 50%; 
-    display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px #000;
+.hero h1 { font-size: 3rem; margin: 0; color: #fff; text-shadow: 2px 2px 10px #000; }
+.hero-btn { 
+    background: var(--gold); color: #000; padding: 12px 30px; border-radius: 5px; 
+    text-decoration: none; font-weight: 900; width: fit-content; margin-top: 15px;
 }
-.live-overlay { position: absolute; top: 20px; left: 20px; background: var(--live-red); color: white; padding: 5px 15px; font-weight: 900; border-radius: 4px; font-size: 14px; }
 
-/* الدردشة */
-.chat-container { flex: 1; min-width: 320px; background: var(--chat-bg); border-radius: 12px; border: 1px solid #222; display: flex; flex-direction: column; height: 550px; }
-.chat-header { padding: 15px; border-bottom: 1px solid #222; font-weight: bold; color: var(--gold); display: flex; justify-content: space-between; }
-.chat-messages { flex: 1; padding: 15px; overflow-y: hidden; font-size: 13px; display: flex; flex-direction: column; gap: 12px; }
-.msg { animation: slideIn 0.3s ease-out; }
-.user { font-weight: bold; color: var(--gold); margin-right: 6px; }
-@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+/* شبكة الحلقات والأقسام */
+.section-title { padding: 40px 5% 10px; font-size: 1.5rem; color: var(--gold); border-bottom: 1px solid #222; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+.section-title span { font-size: 12px; color: #666; cursor: pointer; }
 
-/* أزرار */
-.watch-button { 
-    display: block; background: linear-gradient(90deg, #b8860b, #d4af37, #b8860b); 
-    color: #000; text-align: center; padding: 20px; text-decoration: none; 
-    border-radius: 8px; font-size: 1.5rem; font-weight: 900; margin-top: 25px; 
-    transition: 0.3s; text-transform: uppercase;
+.episodes-grid { 
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; padding: 0 5% 40px;
 }
-.watch-button:hover { transform: translateY(-3px); filter: brightness(1.2); }
+.episode-card { 
+    background: var(--card-bg); border-radius: 8px; overflow: hidden; 
+    transition: 0.3s; cursor: pointer; border: 1px solid #222; position: relative;
+}
+.episode-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+.thumb { width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; position: relative; }
+.thumb::before { content: "LIVE"; position: absolute; top: 10px; left: 10px; background: var(--mex-red); font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 900; }
+.card-body { padding: 12px; }
+.card-body h3 { font-size: 14px; margin: 0 0 5px; color: #fff; }
+.card-body p { font-size: 12px; color: #888; margin: 0; }
 
-.info-box { background: #111; padding: 25px; border-radius: 12px; margin-top: 30px; border-left: 5px solid var(--gold); }
-h1 { font-size: 1.8rem; margin: 25px 0 10px; }
-.meta-info { color: #888; font-size: 0.9rem; margin-bottom: 20px; display: flex; gap: 15px; }
+/* شريط البث المباشر السفلي */
+.live-bar { background: var(--mex-red); color: white; text-align: center; padding: 10px; font-weight: 900; font-size: 14px; position: fixed; bottom: 0; width: 100%; z-index: 1000; }
 
-footer { text-align: center; padding: 50px; color: #444; font-size: 0.8rem; border-top: 1px solid #111; }
+footer { text-align: center; padding: 60px 0 100px; color: #444; border-top: 1px solid #111; }
 </style>
 </head>
 <body>
 
 <header class="header">
     <a href="/" class="logo">MEXI<span>DRAMA</span></a>
-    <div class="live-indicator"><div class="dot"></div><span style="font-weight: bold; color: var(--live-red);">EN VIVO HD</span></div>
+    <div class="nav-links">
+        <a href="#">INICIO</a>
+        <a href="#">NOVELAS</a>
+        <a href="#">ESTRENOS</a>
+        <a href="#">EN VIVO</a>
+    </div>
 </header>
 
-<div class="container">
-    <div class="main-video">
-        <div class="video-wrapper" onclick="window.location.href='https://mexidrama.github.io/corazon-de-oro/capitulo-20.html';">
-            <div class="live-overlay">DIRECTO 4K</div>
-            <img src="https://mexidrama.github.io/images/corazon-de-oro-22.jpg" alt="Corazón de Oro">
-            <div class="play-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="black"><path d="M8 5v14l11-7z"/></svg></div>
-            <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.8); padding: 6px 12px; border-radius: 4px; font-size: 13px;">
-                👁️ <span id="viewers">24,560</span> viendo ahora
-            </div>
-        </div>
+<div class="hero">
+    <h1>Corazón de Oro</h1>
+    <p>¡El secreto de los Rivera ha sido revelado! No te pierdas el drama hoy.</p>
+    <a href="https://mexidrama.github.io/corazon-de-oro/capitulo-20.html" class="hero-btn">VER AHORA</a>
+</div>
 
-        <h1>Corazón de Oro Capítulo 20 Completo (Sábado 28 de Marzo, 2026)</h1>
-        
-        <div class="meta-info"><span>📅 28/03/2026</span> • <span>🎬 Telenovela Premium</span> • <span>⭐ 4.9/5</span></div>
-
-        <a href="https://mexidrama.github.io/corazon-de-oro/capitulo-20.html" class="watch-button">REPRODUCIR CAPÍTULO COMPLETO</a>
-
-        <div class="info-box">
-            <h2 style="color: var(--gold); font-size: 1.4rem; margin-bottom: 15px;">Sinopsis Detallada</h2>
-            <div style="line-height: 1.8; color: #ccc;">
-                <p>En el <strong>Capítulo 20 de Corazón de Oro</strong> emitido hoy <strong>28 de marzo de 2026</strong>, los secretos de la familia Rivera salen a la luz. La confrontación entre Fernando y Lucía marca un antes y un después. ¡Mira el estreno oficial en HD!</p>
-            </div>
+<div class="section-title">ESTRENOS DE HOY (28 DE MARZO) <span>Ver todo</span></div>
+<div class="episodes-grid">
+    <div class="episode-card" onclick="window.location.href='https://mexidrama.github.io/corazon-de-oro/capitulo-20.html';">
+        <div class="thumb" style="background-image: url('https://mexidrama.github.io/images/corazon-de-oro-22.jpg');"></div>
+        <div class="card-body">
+            <h3>Corazón de Oro - Cap 20</h3>
+            <p>14.2k Viendo ahora</p>
         </div>
     </div>
 
-    <div class="chat-container">
-        <div class="chat-header"><span>CHAT EN VIVO</span> <span>🟢 14,2k</span></div>
-        <div class="chat-messages" id="chat-box">
-            <div class="msg"><span class="user">Admin:</span> <span class="text">¡Bienvenidos al estreno!</span></div>
-            <div class="msg"><span class="user">Fan_Drama:</span> <span class="text">¡Por fin el capítulo 20! 😍</span></div>
+    <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
+        <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400');"></div>
+        <div class="card-body">
+            <h3>La Venganza - Cap 45</h3>
+            <p>5.1k Viendo ahora</p>
+        </div>
+    </div>
+
+    <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
+        <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=400');"></div>
+        <div class="card-body">
+            <h3>Amor Eterno - Cap 12</h3>
+            <p>2.8k Viendo ahora</p>
+        </div>
+    </div>
+    
+    <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
+        <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=400');"></div>
+        <div class="card-body">
+            <h3>Pasión prohibida - Cap 05</h3>
+            <p>8.4k Viendo ahora</p>
         </div>
     </div>
 </div>
 
-<footer><p>MEXIDRAMA TV © 2026 - Telenovelas Mexicanas Online</p></footer>
+<div class="section-title">LO MÁS VISTO EN MÉXICO <span>Popular</span></div>
+<div class="episodes-grid">
+    <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
+        <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?q=80&w=400');"></div>
+        <div class="card-body">
+            <h3>Secretos de Familia - FINAL</h3>
+            <p>25k Viendo</p>
+        </div>
+    </div>
+</div>
 
-<script>
-setInterval(() => {
-    let count = Math.floor(Math.random() * (26500 - 24500) + 24500);
-    document.getElementById('viewers').innerText = count.toLocaleString();
-}, 3000);
+<div class="live-bar">🔴 TRANSMISIÓN EN VIVO AHORA - 100% DISPONIBLE</div>
 
-const msgs = ["¡Qué fuerte el secreto!", "Saludos desde CDMX", "¿Ya empezó?", "Fernando es un traidor", "Me encanta!", "Increíble calidad"];
-const chatBox = document.getElementById('chat-box');
-setInterval(() => {
-    const d = document.createElement('div'); d.className = 'msg';
-    d.innerHTML = `<span class="user">User_${Math.floor(Math.random()*99)}:</span> <span class="text">${msgs[Math.floor(Math.random()*msgs.length)]}</span>`;
-    chatBox.appendChild(d);
-    if (chatBox.childNodes.length > 15) chatBox.removeChild(chatBox.firstChild);
-}, 3500);
-</script>
+<footer>
+    <p>MEXIDRAMA TV © 2026<br>Lo mejor del drama mexicano en un solo lugar.</p>
+</footer>
 
 </body>
 </html>
