@@ -1,0 +1,101 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #006847;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo h1 {
+  font-size: 32px;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #006847, #004d33);
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+/* Series Grid */
+.series-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card h3 {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card p {
+  padding: 0 10px 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #111;
+  margin-top: 20px;
+  font-size: 14px;
+}
