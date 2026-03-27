@@ -1,47 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXIDRAMA | Las Mejores Telenovelas Mexicanas</title>
+    <meta name="description" content="Disfruta de las mejores telenovelas mexicanas, clásicos de Televisa, TV Azteca y estrenos exclusivos en alta definición.">
+    <meta name="keywords" content="telenovelas, series mexicanas, drama latino, estrenos, MexiDrama, ver novelas online">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --mex-red: #ce1126; /* Rojo Bandera */
+            --mex-green: #006341; /* Verde Bandera */
+            --bg-dark: #050505;
+            --card-bg: #121212;
+            --text-light: #f5f5f5;
+            --accent: #ebc034;
+        }
 
-  <title>MexiDrama | Series Mexicanas Subtituladas y Dobladas</title>
-  <meta name="description" content="MexiDrama: el mejor sitio para ver las últimas series mexicanas con subtítulos y dobladas al español. ¡Descubre tus series favoritas ahora!">
-  <meta name="keywords" content="series mexicanas, series mexicanas subtituladas, series mexicanas dobladas, MexiDrama, ver series mexicanas">
-  <meta name="robots" content="index, follow">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-  <link rel="stylesheet" href="style.css">
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* Header Estilo Premium */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            color: var(--mex-green);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--mex-red); }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--mex-red); }
+
+        /* Hero Section (Banner Principal) */
+        .hero {
+            height: 95vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 8%;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            line-height: 1;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 550px;
+            margin-bottom: 35px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .btn-group { display: flex; gap: 15px; }
+
+        .btn {
+            padding: 15px 40px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-play { background-color: var(--mex-red); color: white; }
+        .btn-info { background-color: rgba(255,255,255,0.2); color: white; backdrop-filter: blur(10px); }
+
+        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        /* Secciones de Contenido */
+        .content-section { padding: 50px 5%; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 { font-size: 1.6rem; font-weight: 700; }
+        .line { height: 3px; background: var(--mex-green); flex-grow: 1; max-width: 100px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.08);
+            z-index: 2;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .movie-card img { width: 100%; height: 300px; object-fit: cover; }
+
+        .movie-info { padding: 12px; }
+        .movie-info h3 { font-size: 1rem; margin-bottom: 5px; color: #fff; }
+        .genre { font-size: 0.8rem; color: #888; font-weight: 600; }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--mex-green);
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: 900;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        footer p { color: #555; font-size: 0.8rem; letter-spacing: 1px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            nav { display: none; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">
-    <h1>MexiDrama</h1>
-    <p>El mejor sitio para ver series mexicanas subtituladas y dobladas</p>
-  </div>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Series</a>
-    <a href="#">Más vistas</a>
-    <a href="#">Contacto</a>
-  </nav>
-</header>
+    <header id="navbar">
+        <a href="#" class="logo">MEXI<span>DRAMA</span></a>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Novelas</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">Clásicos</a></li>
+                <li><a href="#">Mi Lista</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-  <section class="hero">
-    <h2>¡Mira las últimas series mexicanas ahora!</h2>
-    <p>Las series dramáticas y románticas más recientes, subtituladas y dobladas al español con alta calidad.</p>
-  </section>
+    <section class="hero">
+        <div style="color: var(--mex-green); font-weight: bold; margin-bottom: 10px;">★ LO MÁS DESTACADO</div>
+        <h1>Pasión y Destino</h1>
+        <p>Vive la emoción de las historias más impactantes de México. Traición, amor y secretos que te mantendrán al borde del asiento.</p>
+        <div class="btn-group">
+            <button class="btn btn-play">▶ Reproducir</button>
+            <button class="btn btn-info">ⓘ Más Información</button>
+        </div>
+    </section>
 
-  <section class="series-container" id="series-list">
-    <!-- Las series se generarán aquí automáticamente -->
-  </section>
-</main>
+    <main class="content-section">
+        <div class="section-header">
+            <div class="line"></div>
+            <h2>TENDENCIAS AHORA</h2>
+        </div>
+        
+        <div class="grid">
+            <div class="movie-card">
+                <div class="tag">ESTRENO</div>
+                <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=500&auto=format&fit=crop" alt="Novela">
+                <div class="movie-info">
+                    <h3>Corazón de Hierro</h3>
+                    <div class="genre">DRAMA | 2026</div>
+                </div>
+            </div>
 
-<footer>
-  <p>© 2026 MexiDrama. Todos los derechos reservados.</p>
-</footer>
+            <div class="movie-card">
+                <div class="tag" style="background: var(--mex-red);">POPULAR</div>
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=500&auto=format&fit=crop" alt="Novela">
+                <div class="movie-info">
+                    <h3>Bajo la Piel</h3>
+                    <div class="genre">ROMANCE | 2026</div>
+                </div>
+            </div>
 
-<script src="script.js"></script>
+            <div class="movie-card">
+                <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=500&auto=format&fit=crop" alt="Novela">
+                <div class="movie-info">
+                    <h3>El Capo de Juárez</h3>
+                    <div class="genre">ACCIÓN | 2025</div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="tag">CLÁSICO</div>
+                <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?q=80&w=500&auto=format&fit=crop" alt="Novela">
+                <div class="movie-info">
+                    <h3>Sombras del Ayer</h3>
+                    <div class="genre">MISTERIO | 2024</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>MEXIDRAMA TV &copy; 2026 | Hecho en México para el Mundo</p>
+    </footer>
+
+    <script>
+        // Efecto scroll en el header
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(0,0,0,0.95)';
+                navbar.style.padding = '15px 5%';
+            } else {
+                navbar.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.9), transparent)';
+                navbar.style.padding = '20px 5%';
+            }
+        });
+    </script>
 </body>
 </html>
