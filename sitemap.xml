@@ -9,10 +9,45 @@
   </url>
 
   <url>
-    <loc>https://mexidrama.github.io/corazon-de-oro/capitulo-20.html</loc>
+    <loc>https://mexidrama.github.io/corazon-de-oro/20</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mexidrama.github.io/corazon-de-oro/capitulo-20</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mexidrama.github.io/corazon-de-oro/capitulo-21</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mexidrama.github.io/Un-amor-compartido/capitulo-40</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>hourly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mexidrama.github.io/Un-amor-compartido/capitulo-41</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mexidrama.github.io/Doménica-Montero/capitulo-50</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
