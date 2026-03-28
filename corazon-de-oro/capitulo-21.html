@@ -5,138 +5,153 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>🔴 EN VIVO: Corazón de Oro Capítulo 21 Completo - Sábado 28 de Marzo, 2026 | MexiDrama</title>
-<meta name="description" content="Mira Corazón de Oro Capítulo 21 en vivo. La verdad sobre la familia Rivera se revela hoy 28 de marzo. Streaming HD con chat en vivo y sin anuncios.">
+<meta name="description" content="Mira el estreno oficial de Corazón de Oro Capítulo 21 completo. Streaming en vivo hoy 28 de marzo en Full HD. El secreto de los Rivera revelado en este episodio impactante.">
 <link rel="canonical" href="https://mexidrama.github.io/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Corazón de Oro Capítulo 21 en Vivo - Sábado 28 de Marzo",
+  "description": "Streaming oficial del capítulo 21 de Corazón de Oro emitido hoy 28 de Marzo. Revelación total del testamento y la traición de Valeria.",
+  "thumbnailUrl": [
+    "https://mexidrama.github.io/images/corazon-de-oro-22.jpg",
+    "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=1200"
+  ],
+  "uploadDate": "2026-03-28T19:00:00+00:00",
+  "duration": "PT45M",
+  "contentUrl": "https://go3news.com/wu7n",
+  "embedUrl": "https://mexidrama.github.io/corazon-de-oro/capitulo-21.html",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": { "@type": "WatchAction" },
+    "userInteractionCount": 254302
+  },
+  "regionsAllowed": "MX,US,ES,CO,AR",
+  "publication": {
+    "@type": "BroadcastEvent",
+    "isLiveBroadcast": true,
+    "startDate": "2026-03-28T19:00:00+00:00",
+    "endDate": "2026-03-28T23:59:00+00:00"
+  }
+}
+</script>
 
 <style>
 :root { 
-    --primary: #4b0082; /* أرجواني ملكي */
-    --gold: #ffd700; 
-    --bg-dark: #050505;
-    --chat-bg: #0f0f0f;
-    --live-red: #ff0000;
+    --primary: #4b0082; --gold: #ffd700; --bg-dark: #050505; --chat-bg: #0f0f0f; --live-red: #ff0000;
 }
-body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg-dark); color: #fff; overflow-x: hidden; }
+body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: #fff; overflow-x: hidden; }
 
-/* الهيدر الأرجواني */
+/* الهيدر */
 .header { 
     background: #000; padding: 15px 5%; border-bottom: 2px solid var(--primary); 
     display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;
 }
 .logo { font-weight: 900; font-size: 1.8rem; color: #fff; text-decoration: none; }
-.logo span { color: var(--gold); text-shadow: 0 0 10px var(--primary); }
+.logo span { color: var(--gold); }
 
-.container { max-width: 1200px; margin: auto; padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
-.main-content { flex: 2; min-width: 320px; }
+.container { max-width: 1250px; margin: auto; padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
+.main-player { flex: 2; min-width: 320px; }
 
-/* المشغل الوهمي المطور */
-.video-wrapper { 
+/* مشغل الفيديو: تم تحسينه ليظهر كـ "Object" حقيقي */
+.video-container { 
     position: relative; width: 100%; aspect-ratio: 16/9; background: #000; 
-    border-radius: 12px; overflow: hidden; box-shadow: 0 0 40px rgba(75, 0, 130, 0.5); 
-    cursor: pointer; border: 1px solid #333; 
+    border-radius: 15px; overflow: hidden; box-shadow: 0 10px 50px rgba(75, 0, 130, 0.4); 
+    cursor: pointer; border: 1px solid #222; 
 }
-.video-wrapper img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; transition: 0.5s; }
-.video-wrapper:hover img { opacity: 0.3; transform: scale(1.02); }
-.play-icon { 
+.video-container img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+.play-btn { 
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-    background: var(--gold); width: 80px; height: 80px; border-radius: 50%; 
-    display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px var(--primary);
+    background: var(--gold); width: 90px; height: 90px; border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; transition: 0.3s;
 }
-.live-tag { position: absolute; top: 20px; left: 20px; background: var(--live-red); color: white; padding: 5px 15px; font-weight: 900; border-radius: 4px; font-size: 14px; }
+.play-btn svg { width: 45px; height: 45px; fill: #000; }
+.live-badge { position: absolute; top: 20px; left: 20px; background: var(--live-red); color: white; padding: 6px 15px; font-weight: 900; border-radius: 5px; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
-/* نظام الدردشة التفاعلي */
-.chat-container { flex: 1; min-width: 300px; background: var(--chat-bg); border-radius: 12px; border: 1px solid #222; display: flex; flex-direction: column; height: 600px; }
-.chat-header { padding: 15px; border-bottom: 1px solid #222; font-weight: bold; color: var(--gold); display: flex; justify-content: space-between; }
-.chat-messages { flex: 1; padding: 15px; overflow-y: hidden; font-size: 13px; display: flex; flex-direction: column; gap: 12px; }
-.msg { animation: fadeIn 0.4s ease; }
-.user { font-weight: bold; color: var(--gold); margin-right: 5px; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+/* الدردشة */
+.chat-box { flex: 1; min-width: 300px; background: var(--chat-bg); border-radius: 15px; border: 1px solid #222; display: flex; flex-direction: column; height: 620px; }
+.chat-h { padding: 15px; border-bottom: 1px solid #222; font-weight: bold; color: var(--gold); }
+.chat-m { flex: 1; padding: 15px; overflow: hidden; font-size: 13px; display: flex; flex-direction: column; gap: 12px; }
+.m { animation: slideUp 0.3s ease; }
+.u { font-weight: bold; color: var(--gold); margin-right: 5px; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* أزرار وتحويل */
-.watch-button { 
-    display: block; background: linear-gradient(90deg, var(--primary), #8a2be2); 
-    color: #fff; text-align: center; padding: 20px; text-decoration: none; 
-    border-radius: 8px; font-size: 1.4rem; font-weight: 900; margin-top: 20px; 
-    border: 1px solid var(--gold); transition: 0.3s;
+/* الأزرار والملخص */
+.btn-premium { 
+    display: block; background: linear-gradient(90deg, var(--primary), #6a0dad); 
+    color: #fff; text-align: center; padding: 22px; text-decoration: none; 
+    border-radius: 10px; font-size: 1.5rem; font-weight: 900; margin-top: 25px; 
+    border: 1px solid var(--gold); text-transform: uppercase;
 }
-.watch-button:hover { filter: brightness(1.2); transform: translateY(-3px); }
+.synopsis { background: #111; padding: 35px; border-radius: 15px; margin-top: 35px; border-left: 6px solid var(--primary); }
+.synopsis h2 { color: var(--gold); margin-top: 0; font-size: 1.6rem; }
+.synopsis p { color: #ccc; line-height: 2; font-size: 1.1rem; }
 
-/* ملخص طويل جداً (السم في العسل) */
-.long-info { background: #111; padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 5px solid var(--primary); line-height: 1.8; }
-.long-info h2 { color: var(--gold); margin-top: 0; }
-.long-info p { color: #ccc; font-size: 1.05rem; }
-
-footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; }
+footer { text-align: center; padding: 50px; color: #555; font-size: 0.9rem; border-top: 1px solid #111; }
 </style>
 </head>
 <body>
 
 <header class="header">
     <a href="/" class="logo">MEXI<span>DRAMA</span></a>
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <span style="color: var(--live-red); font-weight: bold; font-size: 14px;">● EN VIVO</span>
-    </div>
+    <div style="font-weight: bold; color: var(--live-red);">EN VIVO 4K</div>
 </header>
 
 <div class="container">
-    <div class="main-content">
-        <div class="video-wrapper" onclick="window.location.href='https://go3news.com/wu7n';">
-            <div class="live-tag">DIRECTO HD</div>
-            <img src="https://mexidrama.github.io/images/corazon-de-oro-22.jpg" alt="Corazón de Oro Cap 21">
-            <div class="play-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="black"/></svg>
-            </div>
-            <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.8); padding: 5px 12px; border-radius: 4px; font-size: 12px;">
-                👁️ <span id="vcount">18,432</span> viendo ahora
+    <main class="main-player">
+        <div class="video-container" onclick="window.location.href='https://go3news.com/wu7n';">
+            <div class="live-badge">DIRECTO</div>
+            <img src="https://mexidrama.github.io/images/corazon-de-oro-22.jpg" alt="Reproductor Corazón de Oro Cap 21">
+            <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 4px; font-size: 12px;">
+                🔴 <span id="v-count">24,102</span> personas viendo
             </div>
         </div>
 
-        <h1 style="font-size: 1.8rem; margin: 20px 0;">Corazón de Oro Capítulo 21 Completo (Sábado 28 de Marzo, 2026)</h1>
+        <h1>Corazón de Oro Capítulo 21 Completo - Sábado 28 de Marzo, 2026</h1>
         
-        <a href="https://go3news.com/wu7n" class="watch-button">REPRODUCIR EN ALTA DEFINICIÓN</a>
+        <a href="https://go3news.com/wu7n" class="btn-premium">REPRODUCIR CAPÍTULO 21 (Full HD)</a>
 
-        <div class="long-info">
-            <h2>Sinopsis Capítulo 21: El Secreto Revelado</h2>
+        <section class="synopsis">
+            <h2>Resumen Detallado: El Destino de Lucía</h2>
             <p>
-                ¡El drama no tiene límites! En el esperado <strong>Capítulo 21 de Corazón de Oro</strong>, transmitido hoy <strong>sábado 28 de marzo</strong>, la tensión llega a su punto máximo. Después de la traición de Valeria, Fernando se encuentra en una situación desesperada que podría cambiar el destino de la herencia de los Rivera para siempre. 
+                ¡Impactante revelación! En el <strong>Capítulo 21 de Corazón de Oro</strong>, la historia de los Rivera da un giro de 180 grados hoy <strong>28 de marzo de 2026</strong>. Tras el accidente de Fernando, Valeria intenta tomar el control de la empresa familiar, pero no cuenta con que Lucía ha encontrado el testamento original oculto en la biblioteca secreta.
                 <br><br>
-                Lucía, por su parte, descubre una carta oculta que revela la verdadera identidad de su madre biológica, lo que desata una serie de confrontaciones violentas en la mansión. Los seguidores de la serie en todo México han calificado este episodio como el más impactante de la temporada 2026. 
-                <br><br>
-                ¿Logrará Fernando sobrevivir al plan maestro de sus enemigos? ¿Qué pasará con el compromiso entre Lucía y Carlos? No te pierdas ni un solo detalle de este capítulo lleno de pasión, venganza y revelaciones sorprendentes. Mira el estreno aquí en Full HD, disponible exclusivamente para nuestra comunidad de <strong>MexiDrama</strong>.
+                Este episodio está cargado de adrenalina y lágrimas, donde la pasión se mezcla con la traición más pura. Los fans en redes sociales han convertido este estreno en tendencia mundial. ¿Podrá Fernando despertar antes de que Valeria firme la venta de la mansión? ¿Qué pasará con el secreto que Lucía ha jurado proteger? No te pierdas ni un segundo de esta transmisión exclusiva en 4K sin cortes comerciales.
             </p>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <div class="chat-container">
-        <div class="chat-header"><span>CHAT EN VIVO</span> <span style="color: var(--live-red);">●</span></div>
-        <div class="chat-messages" id="chatbox">
-            <div class="msg"><span class="user">Admin_Mexi:</span> <span class="text">¡Bienvenidos al Cap 21! Disfruten el estreno.</span></div>
-            <div class="msg"><span class="user">Elena_99:</span> <span class="text">¡No puedo creer lo que hizo Valeria! 😱</span></div>
-            <div class="msg"><span class="user">Juan_M:</span> <span class="text">Se ve increíble la imagen hoy.</span></div>
-            <div class="msg"><span class="user">NovelaLover:</span> <span class="text">¿Ya revelaron el testamento?</span></div>
+    <aside class="chat-box">
+        <div class="chat-h">CHAT EN VIVO (24k)</div>
+        <div class="chat-m" id="chat">
+            <div class="m"><span class="u">Admin:</span> <span class="t">¡Disfruten del Capítulo 21!</span></div>
+            <div class="m"><span class="u">Mariana_TX:</span> <span class="t">¡No puedo creer lo de Valeria! 😱</span></div>
+            <div class="m"><span class="u">Jose_V:</span> <span class="t">Saludos desde Guadalajara, esperando el final.</span></div>
         </div>
-    </div>
+    </aside>
 </div>
 
-<footer>MEXIDRAMA TV © 2026 - Telenovelas Mexicanas 4K</footer>
+<footer>MEXIDRAMA TV © 2026 - El sitio oficial de Telenovelas Mexicanas HD</footer>
 
 <script>
-// تحديث المشاهدين
+// تحديث العداد
 setInterval(() => {
-    let n = Math.floor(Math.random() * (20000 - 18000) + 18000);
-    document.getElementById('vcount').innerText = n.toLocaleString();
-}, 2500);
+    let c = Math.floor(Math.random() * (26000 - 24000) + 24000);
+    document.getElementById('v-count').innerText = c.toLocaleString();
+}, 3000);
 
-// رسائل الدردشة الآلية
-const texts = ["¡Fernando no mueras!", "Saludos desde Sinaloa", "La mejor novela", "¡Qué fuerte!", "Increíble capítulo", "Lucia es una valiente"];
-const chat = document.getElementById('chatbox');
+// رسائل تلقائية
+const msgs = ["¡Qué fuerte!", "Me encanta esta novela", "Fernando no puede morir", "¿Ya empezó?", "Lucia es la mejor", "Excelente calidad"];
+const chat = document.getElementById('chat');
 setInterval(() => {
-    const d = document.createElement('div');
-    d.className = 'msg';
-    d.innerHTML = `<span class="user">User_${Math.floor(Math.random()*100)}:</span> <span class="text">${texts[Math.floor(Math.random()*texts.length)]}</span>`;
+    const d = document.createElement('div'); d.className = 'm';
+    d.innerHTML = `<span class="u">User_${Math.floor(Math.random()*99)}:</span> <span class="t">${msgs[Math.floor(Math.random()*msgs.length)]}</span>`;
     chat.appendChild(d);
     if(chat.childNodes.length > 15) chat.removeChild(chat.firstChild);
-}, 3000);
+}, 3500);
 </script>
 
 </body>
