@@ -5,133 +5,173 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MexiDrama | Ver Telenovelas Mexicanas Gratis en Vivo HD</title>
-<meta name="description" content="La plataforma #1 para ver Corazón de Oro y las mejores telenovelas mexicanas de 2026 en vivo. Capítulos completos en Full HD sin registros.">
+<meta name="description" content="La plataforma #1 para ver Corazón de Oro, Un Amor Compartido y Doménica Montero en vivo. Capítulos completos en Full HD sin registros.">
 <link rel="canonical" href="https://mexidrama.github.io/">
+<meta property="og:image" content="https://mexidrama.github.io/images/corazon-de-oro-22.jpg">
 
 <style>
 :root { 
-    --gold: #d4af37; --mex-red: #ce1126; --bg-dark: #050505; --card-bg: #121212;
+    --gold: #d4af37; --mex-red: #ce1126; --bg-dark: #050505; --card-bg: #121212; --accent: #00d4ff;
 }
-body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: #fff; overflow-x: hidden; }
+body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: #fff; overflow-x: hidden; scroll-behavior: smooth; }
 
 /* الهيدر الاحترافي */
 .header { 
-    background: #000; padding: 15px 5%; border-bottom: 2px solid var(--gold); 
+    background: rgba(0,0,0,0.95); padding: 15px 5%; border-bottom: 2px solid var(--gold); 
     display: flex; justify-content: space-between; align-items: center; 
-    position: sticky; top: 0; z-index: 1000;
+    position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px);
 }
 .logo { font-weight: 900; font-size: 1.8rem; color: #fff; text-decoration: none; letter-spacing: -1px; }
 .logo span { color: var(--gold); }
 .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: bold; }
-.nav-links a { color: #ccc; text-decoration: none; transition: 0.3s; }
+.nav-links a { color: #ccc; text-decoration: none; transition: 0.3s; text-transform: uppercase; }
 .nav-links a:hover { color: var(--gold); }
 
 /* البانر الرئيسي (Hero) */
 .hero { 
-    width: 100%; height: 450px; 
+    width: 100%; height: 550px; 
     background: linear-gradient(to bottom, transparent, var(--bg-dark)), url('https://mexidrama.github.io/images/corazon-de-oro-22.jpg') center/cover;
-    display: flex; flex-direction: column; justify-content: flex-end; padding: 0 5% 40px;
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 0 5% 60px;
 }
-.hero h1 { font-size: 3rem; margin: 0; color: #fff; text-shadow: 2px 2px 10px #000; }
+.hero-content { max-width: 600px; }
+.hero h1 { font-size: 3.5rem; margin: 0; color: #fff; text-shadow: 2px 2px 15px #000; }
+.hero p { font-size: 1.2rem; text-shadow: 1px 1px 5px #000; color: #ddd; }
 .hero-btn { 
-    background: var(--gold); color: #000; padding: 12px 30px; border-radius: 5px; 
-    text-decoration: none; font-weight: 900; width: fit-content; margin-top: 15px;
+    display: inline-block; background: var(--gold); color: #000; padding: 15px 40px; border-radius: 5px; 
+    text-decoration: none; font-weight: 900; margin-top: 20px; transition: 0.3s;
 }
+.hero-btn:hover { transform: scale(1.05); background: #fff; }
 
-/* شبكة الحلقات والأقسام */
-.section-title { padding: 40px 5% 10px; font-size: 1.5rem; color: var(--gold); border-bottom: 1px solid #222; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
-.section-title span { font-size: 12px; color: #666; cursor: pointer; }
+/* شبكة الحلقات */
+.section-title { padding: 40px 5% 10px; font-size: 1.6rem; color: var(--gold); display: flex; justify-content: space-between; align-items: center; }
+.section-title span { font-size: 14px; color: #666; font-weight: normal; }
 
 .episodes-grid { 
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 20px; padding: 0 5% 40px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+    gap: 25px; padding: 0 5% 50px;
 }
 .episode-card { 
-    background: var(--card-bg); border-radius: 8px; overflow: hidden; 
-    transition: 0.3s; cursor: pointer; border: 1px solid #222; position: relative;
+    background: var(--card-bg); border-radius: 12px; overflow: hidden; 
+    transition: 0.4s; cursor: pointer; border: 1px solid #222; position: relative;
 }
-.episode-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+.episode-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1); }
 .thumb { width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; position: relative; }
-.thumb::before { content: "LIVE"; position: absolute; top: 10px; left: 10px; background: var(--mex-red); font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 900; }
-.card-body { padding: 12px; }
-.card-body h3 { font-size: 14px; margin: 0 0 5px; color: #fff; }
-.card-body p { font-size: 12px; color: #888; margin: 0; }
+.live-tag { position: absolute; top: 12px; left: 12px; background: var(--mex-red); color: white; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 900; animation: blink 1.5s infinite; }
+.card-body { padding: 15px; }
+.card-body h3 { font-size: 16px; margin: 0 0 8px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-body p { font-size: 13px; color: #aaa; margin: 0; display: flex; align-items: center; gap: 5px; }
 
 /* شريط البث المباشر السفلي */
-.live-bar { background: var(--mex-red); color: white; text-align: center; padding: 10px; font-weight: 900; font-size: 14px; position: fixed; bottom: 0; width: 100%; z-index: 1000; }
+.live-bar { background: var(--mex-red); color: white; text-align: center; padding: 12px; font-weight: 900; font-size: 14px; position: fixed; bottom: 0; width: 100%; z-index: 1000; box-shadow: 0 -5px 15px rgba(0,0,0,0.5); }
 
-footer { text-align: center; padding: 60px 0 100px; color: #444; border-top: 1px solid #111; }
+@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
+@media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .nav-links { display: none; } }
+
+footer { text-align: center; padding: 80px 0 120px; color: #555; border-top: 1px solid #111; font-size: 14px; }
 </style>
 </head>
 <body>
 
 <header class="header">
     <a href="/" class="logo">MEXI<span>DRAMA</span></a>
-    <div class="nav-links">
-        <a href="#">INICIO</a>
-        <a href="#">NOVELAS</a>
-        <a href="#">ESTRENOS</a>
-        <a href="#">EN VIVO</a>
-    </div>
+    <nav class="nav-links">
+        <a href="/">Inicio</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#populares">Populares</a>
+        <a href="https://go3news.com/wu7n" target="_blank" style="color:var(--mex-red)">★ Premium</a>
+    </nav>
 </header>
 
 <div class="hero">
-    <h1>Corazón de Oro</h1>
-    <p>¡El secreto de los Rivera ha sido revelado! No te pierdas el drama hoy.</p>
-    <a href="https://mexidrama.github.io/corazon-de-oro/capitulo-20.html" class="hero-btn">VER AHORA</a>
+    <div class="hero-content">
+        <h1>Corazón de Oro</h1>
+        <p>Capítulo 20: El enfrentamiento que lo cambiará todo. Disponible ahora en ultra definición.</p>
+        <a href="https://mexidrama.github.io/corazon-de-oro/capitulo-20.html" class="hero-btn">VER CAPÍTULO DE HOY</a>
+    </div>
 </div>
 
-<div class="section-title">ESTRENOS DE HOY (28 DE MARZO) <span>Ver todo</span></div>
+<div id="novedades" class="section-title">ESTRENOS EXCLUSIVOS <span>Sábado, 28 de Marzo</span></div>
 <div class="episodes-grid">
-    <div class="episode-card" onclick="window.location.href='https://mexidrama.github.io/corazon-de-oro/capitulo-20.html';">
-        <div class="thumb" style="background-image: url('https://mexidrama.github.io/images/corazon-de-oro-22.jpg');"></div>
+    
+    <div class="episode-card" onclick="window.location.href='https://mexidrama.github.io/Un-amor-compartido/capitulo-41.html';">
+        <div class="thumb" style="background-image: url('https://mexidrama.github.io/images/Un-amor-compartido-40.jpg');">
+            <div class="live-tag">NUEVO</div>
+        </div>
         <div class="card-body">
-            <h3>Corazón de Oro - Cap 20</h3>
-            <p>14.2k Viendo ahora</p>
+            <h3>Un Amor Compartido - Cap 41</h3>
+            <p>🔴 28.5k Viendo ahora</p>
         </div>
     </div>
 
+    <div class="episode-card" onclick="window.location.href='https://mexidrama.github.io/Doménica-Montero/capitulo-50.html';">
+        <div class="thumb" style="background-image: url('https://mexidrama.github.io/images/Doménica-Montero-50.jpg');">
+            <div class="live-tag">CLÁSICO</div>
+        </div>
+        <div class="card-body">
+            <h3>Doménica Montero - Cap 50</h3>
+            <p>🔴 12.1k Viendo ahora</p>
+        </div>
+    </div>
+
+    <div class="episode-card" onclick="window.location.href='https://mexidrama.github.io/corazon-de-oro/capitulo-20.html';">
+        <div class="thumb" style="background-image: url('https://mexidrama.github.io/images/corazon-de-oro-22.jpg');">
+            <div class="live-tag">TENDENCIA</div>
+        </div>
+        <div class="card-body">
+            <h3>Corazón de Oro - Cap 20</h3>
+            <p>🔴 45.9k Viendo ahora</p>
+        </div>
+    </div>
+
+    <div class="episode-card" onclick="window.location.href='https://mexidrama.github.io/Un-amor-compartido/capitulo-40.html';">
+        <div class="thumb" style="background-image: url('https://mexidrama.github.io/images/Un-amor-compartido-40.jpg');"></div>
+        <div class="card-body">
+            <h3>Un Amor Compartido - Cap 40</h3>
+            <p>📺 Disponible en HD</p>
+        </div>
+    </div>
+</div>
+
+<div id="populares" class="section-title">RECOMENDADOS PARA TI <span>MÁS DRAMA</span></div>
+<div class="episodes-grid">
     <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
         <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400');"></div>
         <div class="card-body">
-            <h3>La Venganza - Cap 45</h3>
-            <p>5.1k Viendo ahora</p>
+            <h3>La Venganza de Elena - Cap 45</h3>
+            <p>🔥 Muy Popular</p>
         </div>
     </div>
 
     <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
         <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=400');"></div>
         <div class="card-body">
-            <h3>Amor Eterno - Cap 12</h3>
-            <p>2.8k Viendo ahora</p>
-        </div>
-    </div>
-    
-    <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
-        <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=400');"></div>
-        <div class="card-body">
-            <h3>Pasión prohibida - Cap 05</h3>
-            <p>8.4k Viendo ahora</p>
+            <h3>Amor Eterno - Estreno 2026</h3>
+            <p>🆕 Recién Agregado</p>
         </div>
     </div>
 </div>
 
-<div class="section-title">LO MÁS VISTO EN MÉXICO <span>Popular</span></div>
-<div class="episodes-grid">
-    <div class="episode-card" onclick="window.location.href='https://go3news.com/wu7n';">
-        <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?q=80&w=400');"></div>
-        <div class="card-body">
-            <h3>Secretos de Familia - FINAL</h3>
-            <p>25k Viendo</p>
-        </div>
-    </div>
-</div>
-
-<div class="live-bar">🔴 TRANSMISIÓN EN VIVO AHORA - 100% DISPONIBLE</div>
+<div class="live-bar">🔴 TRANSMISIÓN GLOBAL EN VIVO - CALIDAD 4K HABILITADA</div>
 
 <footer>
-    <p>MEXIDRAMA TV © 2026<br>Lo mejor del drama mexicano en un solo lugar.</p>
+    <p>MEXIDRAMA TV © 2026<br>
+    Telenovelas Premium, Series Clásicas y Estrenos Diarios.<br>
+    <small style="color:#333">Desarrollado para fans del drama mexicano.</small></p>
 </footer>
+
+<script>
+    // تغيير بسيط في عدد المشاهدات لإضافة لمسة واقعية
+    setInterval(() => {
+        const counts = document.querySelectorAll('.card-body p');
+        counts.forEach(p => {
+            if(p.innerText.includes('Viendo now')) {
+                let current = parseInt(p.innerText.match(/\d+/)[0]);
+                let newCount = current + Math.floor(Math.random() * 20) - 10;
+                p.innerHTML = `🔴 ${newCount.toLocaleString()} Viendo ahora`;
+            }
+        });
+    }, 5000);
+</script>
 
 </body>
 </html>
