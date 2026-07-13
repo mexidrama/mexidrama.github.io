@@ -3,70 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Señor de los Cielos - Temporada 10 Capítulo 5 | MexiDrama</title>
+    <title>🔴 EN VIVO: El Señor de los Cielos T10 C6 | MexiDrama</title>
     <style>
-        :root { --gold: #d4af37; --bg: #020202; --text: #fff; --border: #222; }
-        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
-        .header { padding: 20px 5%; border-bottom: 2px solid var(--gold); text-align: center; }
-        .logo { font-size: 2rem; font-weight: 900; color: #fff; text-decoration: none; }
-        .logo span { color: var(--gold); }
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        .video-wrapper { width: 100%; aspect-ratio: 16/9; background: #111; border-radius: 12px; border: 1px solid #333; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
-        .info-box { background: #111; padding: 25px; border-radius: 12px; border-left: 5px solid var(--gold); margin-bottom: 30px; }
-        h1, h2 { color: var(--gold); }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #0a0a0a; }
-        th, td { padding: 12px; border: 1px solid var(--border); text-align: left; }
-        th { background: #1a1a1a; color: var(--gold); }
-        .nav-seasons { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-        .btn-season { background: #222; padding: 8px 15px; border-radius: 5px; color: #fff; text-decoration: none; border: 1px solid #444; font-size: 0.9rem; }
-        .btn-season:hover, .active { border-color: var(--gold); }
-        footer { text-align: center; padding: 40px; color: #555; font-size: 0.8rem; border-top: 1px solid var(--border); }
+        :root { --gold: #d4af37; --bg: #020202; --live-red: #ff0000; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #fff; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+        .video-box { aspect-ratio: 16/9; background: #111; border-radius: 12px; border: 1px solid #333; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .video-box img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+        .play-link { position: absolute; cursor: pointer; display: flex; flex-direction: column; align-items: center; }
+        .play-icon { background: var(--gold); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .live-badge { position: absolute; top: 15px; left: 15px; background: var(--live-red); padding: 5px 12px; border-radius: 4px; font-weight: bold; }
+        .chat-box { background: #0f0f0f; border-radius: 12px; border: 1px solid #222; height: 500px; display: flex; flex-direction: column; }
+        .chat-msgs { flex: 1; padding: 15px; overflow-y: auto; font-size: 13px; }
+        .faq-section { grid-column: span 2; background: #111; padding: 25px; border-radius: 12px; border-left: 5px solid var(--gold); }
+        .msg { margin-bottom: 10px; }
+        .user { color: var(--gold); font-weight: bold; }
     </style>
 </head>
 <body>
-    <header class="header">
-        <a href="/" class="logo">MEXI<span>DRAMA</span></a>
+    <header style="padding: 20px; border-bottom: 2px solid var(--gold); text-align: center;">
+        <h1 style="color:#fff; margin:0;">MEXI<span>DRAMA</span> - TRANSMISIÓN EN VIVO</h1>
     </header>
 
     <div class="container">
-        <div class="video-wrapper">
-            <img src="https://mexicodrama.github.io/images/el-senor-de-los-cielos.webp" alt="El Señor de los Cielos" style="max-width:100%; opacity:0.6;">
+        <!-- قسم الفيديو -->
+        <div>
+            <div class="video-box">
+                <div class="live-badge">🔴 EN VIVO</div>
+                <img src="https://mexidrama.github.io/images/6.webp" alt="El Señor de los Cielos">
+                <a href="https://omg10.com/4/8595673" target="_blank" class="play-link">
+                    <div class="play-icon"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <div style="position:absolute; bottom:15px; right:15px; font-weight:bold; background:rgba(0,0,0,0.5); padding:5px;">👁️ <span id="viewers">24,560</span></div>
+            </div>
+            <h1>Temporada 10 - Capítulo 6</h1>
         </div>
 
-        <h1>El Señor de los Cielos - Temporada 10 Capítulo 5</h1>
-        
-        <div class="info-box">
-            <h2>Detalles del Estreno</h2>
-            <p><strong>Fecha:</strong> Estreno el 7 de julio de 2026. <strong>Horario:</strong> 21:00h (ET) / 20:00h (México).</p>
-            <p><strong>Sinopsis:</strong> Aurelio Casillas (Rafael Amaya) regresa para un cierre épico. La temporada aborda los conflictos finales con la DEA y las traiciones que marcarán el destino de su imperio.</p>
-            <p><strong>¿Dónde verla?</strong> Sitio web oficial de <strong>Telemundo</strong> y plataforma <strong>Peacock</strong>.</p>
+        <!-- قسم التعليقات -->
+        <div class="chat-box">
+            <div style="padding:15px; border-bottom:1px solid #333; color:var(--gold);">CHAT EN VIVO</div>
+            <div class="chat-msgs" id="chat-msgs">
+                <div class="msg"><span class="user">Admin:</span> ¡Bienvenidos al capítulo 6!</div>
+            </div>
         </div>
 
-        <h2>Calendario de Emisión</h2>
-        <table>
-            <tr><th>Capítulo</th><th>Fecha</th><th>Estado</th></tr>
-            <tr><td>Capítulo 1</td><td>07/07/2026</td><td>Disponible</td></tr>
-            <tr><td>Capítulo 2</td><td>08/07/2026</td><td>Disponible</td></tr>
-            <tr><td>Capítulo 3</td><td>09/07/2026</td><td>Disponible</td></tr>
-            <tr><td>Capítulo 4</td><td>10/07/2026</td><td>Disponible</td></tr>
-            <tr><td>Capítulo 5</td><td>13/07/2026</td><td>En Emisión</td></tr>
-        </table>
-
-        <h2>Navegar entre Temporadas</h2>
-        <div class="nav-seasons">
-            <a href="#" class="btn-season">Temp 1</a>
-            <a href="#" class="btn-season">Temp 2</a>
-            <a href="#" class="btn-season">Temp 3</a>
-            <a href="#" class="btn-season">Temp 4</a>
-            <a href="#" class="btn-season">Temp 5</a>
-            <a href="#" class="btn-season">Temp 6</a>
-            <a href="#" class="btn-season">Temp 7</a>
-            <a href="#" class="btn-season">Temp 8</a>
-            <a href="#" class="btn-season">Temp 9</a>
-            <a href="#" class="btn-season active">Temp 10 (Final)</a>
+        <!-- قسم السؤال والجواب -->
+        <div class="faq-section">
+            <h2 style="color:var(--gold);">Preguntas Frecuentes (Q&A)</h2>
+            <p><strong>¿El capítulo es completo?</strong> Sí, se transmite la versión original sin cortes.</p>
+            <p><strong>¿Puedo ver otros capítulos?</strong> Puedes navegar por nuestro menú principal.</p>
         </div>
     </div>
 
-    <footer>MEXIDRAMA TV © 2026 - Guía oficial de series.</footer>
+    <script>
+        setInterval(() => {
+            let v = parseInt(document.getElementById('viewers').innerText.replace(',', ''));
+            v += Math.floor(Math.random() * 20) - 10;
+            document.getElementById('viewers').innerText = v.toLocaleString();
+        }, 3000);
+
+        const msgs = ["¡Qué buen inicio!", "Aurelio el mejor", "Saludos desde México", "La mejor serie"];
+        setInterval(() => {
+            const div = document.createElement('div');
+            div.className = 'msg';
+            div.innerHTML = `<span class="user">User_${Math.floor(Math.random()*99)}:</span> ${msgs[Math.floor(Math.random()*msgs.length)]}`;
+            const box = document.getElementById('chat-msgs');
+            box.appendChild(div);
+            box.scrollTop = box.scrollHeight;
+            if(box.children.length > 10) box.removeChild(box.firstChild);
+        }, 3000);
+    </script>
 </body>
 </html>
